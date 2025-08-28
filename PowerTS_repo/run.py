@@ -47,7 +47,7 @@ def main():
 
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
     print('Device:', device, 'users:', user_vocab, 'train samples:', len(train_ds), 'valid samples:', len(valid_ds))
-    train_loop(model, train_ds, valid_ds, epochs=int(cfg['epochs']), lr=cfg.get('lr',1e-3), device=device)
+    train_loop(model, train_ds, valid_ds, epochs=int(cfg['epochs']), lr=float(cfg.get('lr', 1e-3)), device=device)
 
 if __name__ == '__main__':
     main()
