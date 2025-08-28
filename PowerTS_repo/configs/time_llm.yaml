@@ -1,0 +1,10 @@
+seed: 42
+seq_len: 96
+pred_len: 24
+batch_size: 16
+epochs: 3
+lr: 1e-4
+model: time_llm
+time_llm_name: distilgpt2
+user_embed_dim: 8
+norm: standard
